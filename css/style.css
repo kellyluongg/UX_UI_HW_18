@@ -1,6 +1,6 @@
 /* Basic styling */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,8 +11,8 @@ body {
 }
 
 header {
-  background-color: #333;
-  color: white;
+  background-color: #092c4c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
   text-align: center;
   width: 100%;
@@ -23,10 +23,21 @@ header h1 {
   margin: 0;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1%;
+}
+
 nav ul {
+  display: flex;
+  justify-content: space-around;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  height: fit-content;
+  width: 50%;
 }
 
 nav li {
@@ -45,14 +56,21 @@ nav a {
   width: 80%; /* Adjust the width as needed */
 }
 
-.flexContainer {
-  display: flex;
+#row { 
+  background-color: #FFF7DE;
+  display: flex; /* Add display property */
+  flex-direction: row;
+  justify-content: space-between; /* Add justify-content property */
+  padding: 10px;
+  margin: 10px;
 }
 
-.flexContainer > div {
-  width: 33%;
-  padding: 20px;
-  box-sizing: border-box;
+.flex_item {
+  width: 30%; /* Adjust the width as needed */
+  padding: 10px;
+  margin: 10px;
+  background-color: #092c4c;
+  color: white;
 }
 
 /* My Work Section */
@@ -62,6 +80,39 @@ nav a {
 }
 
 .workGrid {
+  margin: 0px 5%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap:
+  grid-template-rows: 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 100%; /* Set the width to 100% */
+  box-sizing: border-box;
+}
+
+.workGrid > div {
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 600px) {
+  /* My Work Section for Mobile */
+  .workGrid {
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "mySkills"
+    "myWork";
+  }
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}

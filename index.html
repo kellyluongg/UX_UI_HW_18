@@ -1,39 +1,41 @@
-<!--  My UX Skills section coded using CSS flex -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link rel="stylesheet" href="styles.css">
   <title>Your Page Title</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
   <header>
     <h1>Your Website</h1>
-    <nav>
-      <ul>
-        <li><a href="#mySkills">My UX Skills</a></li>
-        <li><a href="#myWork">My Work</a></li>
-      </ul>
+    <nav class="inline-block">
+      <div class="nav">
+        <div class="logo">
+          <img src="images/Free_Sample_By_Wix.jpg" alt="Kelly Luong Logo">
+        </div>
+        <ul>
+          <li><a href="#mySkills">My UX Skills</a></li>
+          <li><a href="#myWork">My Work</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <section id="mySkills" class="mySkills">
     <h1>My UX Skills</h1>
-    <div class="flexContainer">
-      <div>
-        <img src="icon1.png" alt="Skill 1">
+    <div id="row" class="flex">
+      <div class="flex_item">
+        <img src="images/Skills.png" alt="Skill 1">
         <h3>Skill 1</h3>
         <p>Description of Skill 1.</p>
       </div>
-      <div>
-        <img src="icon2.png" alt="Skill 2">
+      <div class="flex_item">
+        <img src="images/Skills.png" alt="Skill 2">
         <h3>Skill 2</h3>
         <p>Description of Skill 2.</p>
       </div>
-      <div>
-        <img src="icon3.png" alt="Skill 3">
+      <div class="flex_item">
+        <img src="images/Skills.png" alt="Skill 3">
         <h3>Skill 3</h3>
         <p>Description of Skill 3.</p>
       </div>
@@ -68,5 +70,4 @@
   </footer>
 
 </body>
-
 </html>
